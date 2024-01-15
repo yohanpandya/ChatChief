@@ -1,0 +1,132 @@
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  background: black; /* Set the background color for the entire page */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background: black;
+  background-size: 100% 100%;
+  color: white;
+  font-family: 'Courier New', monospace;
+}
+
+.title-container {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 36px; /* Increased font size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px; /* Added margin at the bottom */
+  transform: scaleY(1.2);
+}
+
+/* Add styles for other elements as needed */
+.output-container {
+  margin-top: 20px;
+}
+
+.output-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.output {
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+/* Add styles for your form elements */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add left-aligned instructions */
+.instructions {
+  text-align: left;
+  margin: 20px;
+}
+
+/* Additional style for instructions list */
+.instructions-list {
+  padding-left: 20px;
+}
+
+.row{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2{
+  flex-basis:  60%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color:#FFFFFF;
+}
+.about-me-text{
+  font-size: 20px;
+}
+.Find-col-1{
+  flex-basis: 35%;
+  padding-left: 40px;
+  padding-top: 50px;
+}
+.Find-col-2{
+  flex-basis:  60%;
+  padding-left: 20px;
+}
+.Upload-col-2{
+  flex-basis:  35%;
+  justify-content: center;
+}
+
+.fileInput{
+  margin: 10px auto;
+
+  padding: 14px 50px;
+
+  
+}
+
+.python-output {
+  background-color: #ff89d2;
+  color: #000000;
+  padding: 15px; /* Increase padding for more space around the text */
+  margin-right: 20px; /* Add margin to the right side */
+  border: 1px solid #000000; /* Add a 1px black border around the text */
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+  font-size: 13px; /* Set the font size to 13px or adjust as needed */
+}
+
+
