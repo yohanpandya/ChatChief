@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
-    "build": "react-scripts build",
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "build": "react-scripts build"
+    
   },
   "keywords": [],
   "author": "",
