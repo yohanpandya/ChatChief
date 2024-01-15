@@ -31,6 +31,10 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/ping', (req, res) => {
+    res.status(200).json({ success: 'Alive!' });
+})
+
 // Run Python script route with user input as a parameter
 router.post('/run-python', (req, res) => {
     const userInput = req.query.input;  // Get user input from query parameter

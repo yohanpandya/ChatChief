@@ -154,8 +154,9 @@ def analyze_chat(desiredChatName):
     i = -1
 
     for number, score in sorted_result.items():
-        number = number[2:]
-        number = f"{number[:3]}-{number[3:6]}-{number[6:]}"
+        if '@' not in number:
+            number = number[2:]  
+            number = f"{number[:3]}-{number[3:6]}-{number[6:]}"
         score = int(score*100)
         i += 1
         if i == 0:
