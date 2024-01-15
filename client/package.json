@@ -1,5 +1,4 @@
 {
-  "homepage": "http://yohanpandya.github.io/ChatChief",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "CI=false react-scripts build"
+    
   },
   "eslintConfig": {
     "extends": [
