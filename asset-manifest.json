@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ChatChief/static/css/main.f3bfb12f.css",
+    "main.js": "/ChatChief/static/js/main.aa8e7e12.js",
+    "static/js/787.d5fa4d18.chunk.js": "/ChatChief/static/js/787.d5fa4d18.chunk.js",
+    "static/media/logo.png": "/ChatChief/static/media/logo.f64a771f111719f8c105.png",
+    "static/media/phone-image.png": "/ChatChief/static/media/phone-image.c0dcaaca5ab423f72834.png",
+    "index.html": "/ChatChief/index.html",
+    "main.f3bfb12f.css.map": "/ChatChief/static/css/main.f3bfb12f.css.map",
+    "main.aa8e7e12.js.map": "/ChatChief/static/js/main.aa8e7e12.js.map",
+    "787.d5fa4d18.chunk.js.map": "/ChatChief/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3bfb12f.css",
+    "static/js/main.aa8e7e12.js"
+  ]
+}
