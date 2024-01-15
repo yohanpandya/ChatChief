@@ -5,6 +5,7 @@ import PhoneImage from "./assets/phone-image.png"
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Route, Routes }from "react-router-dom";
 
+const backend = "http://localhost:8000"
 
 function App() {
   const fileInput = useRef(null);
@@ -21,14 +22,17 @@ function App() {
 
     try {
       // Upload the file
-      const uploadResponse = await fetch('/profile', {
+      const uploadResponse = await fetch(backend + '/profile', {
         method: "POST",
         body: formData,
       });
 
-      if (uploadResponse.ok) {
+      if (uploadResponse.status === 200) {
+
+        const responseData = await uploadResponse.json();
+        console.log("Response from server:", responseData);
         // Trigger Python script execution with user input
-        const runPythonResponse = await fetch(`/profile/run-python?input=${userInput}`, {
+          const runPythonResponse = await fetch(`/profile/run-python?input=${userInput}`, {
           method: "POST",
         });
 
@@ -64,7 +68,7 @@ function App() {
             </div>
             <div class="about-col-2">
                     <h1 class="sub-title">What We Do</h1>
-                    <p align="left" class = "about-me-text">
+                    <p align="left" className = "about-me-text">
                         ChatChief predicts who your group leader (the person in your group with the most influence) is using an algorithm based on who gets the most replies to their message within the shortest amount of time.
                     </p>
                    
@@ -78,7 +82,7 @@ function App() {
       <div class="Upload-col-1">
         <h2 class="sub-title">Find chat.db</h2>
       
-        <ol align="left" class = "about-me-text">
+        <ol align="left" className = "about-me-text">
           <li>Open Finder</li>
           <li>Click "Go" from the toolbar at the top left.</li>
           <li>Click "Go to Folder..." (the second to last option)</li>

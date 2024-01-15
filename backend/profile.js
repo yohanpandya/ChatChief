@@ -6,11 +6,14 @@ const { exec } = require('child_process');
 const FGLAlgo = path.join(__dirname, "FGLAlgo.py");
 const assetsFolder = path.join(__dirname, "assets");
 const router = express.Router();
+const cors = require('cors'); // Import cors module
 
+router.use(cors());
 router.use(fileUpload());
 
 // File upload route
 router.post('/', async (req, res) => {
+    console.log ("post");
     if (req.files == null){
         console.error('Error processing uploaded file:');
         res.status(500).json({ error: 'Internal server error' });
@@ -23,7 +26,7 @@ router.post('/', async (req, res) => {
     try {
         // Move the uploaded file to the assets folder
         chatdb.mv(filePath);
-
+        console.log ("File Uploaded");
         res.json({ message: 'File uploaded successfully' });
     } catch (e) {
         console.error('Error processing uploaded file:', e);
@@ -32,6 +35,7 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/ping', (req, res) => {
+    console.log("ping")
     res.status(200).json({ success: 'Alive!' });
 })
 
