@@ -32,7 +32,7 @@ function App() {
         const responseData = await uploadResponse.json();
         console.log("Response from server:", responseData);
         // Trigger Python script execution with user input
-          const runPythonResponse = await fetch(`/profile/run-python?input=${userInput}`, {
+          const runPythonResponse = await fetch( backend+ `/profile/run-python?input=${userInput}`, {
           method: "POST",
         });
 

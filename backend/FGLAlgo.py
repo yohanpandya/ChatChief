@@ -7,6 +7,8 @@ import sys
 def analyze_chat(desiredChatName):
     if desiredChatName == "":
         print("Error: Please enter a group chat name. Also, make sure your uploaded file is titled \"chat.db\"")
+        cursor.close()
+        connection.close()
         return
     # Connect to the database
     connection = sqlite3.connect('assets/chat.db') 
@@ -43,6 +45,8 @@ def analyze_chat(desiredChatName):
     
     except:
         print( "Error: Please enter an exact group chat name. Copy and paste it from your messages. make sure your uploaded file is titled \"chat.db\"")
+        cursor.close()
+        connection.close()
         return
     cursor.execute("INSERT OR REPLACE INTO handle (ROWID, id, service) VALUES (?, ?, ?)", (0, user_num, "iMessage"))
 
