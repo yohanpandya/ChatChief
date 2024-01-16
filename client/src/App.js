@@ -65,7 +65,7 @@ function App() {
           <div className="about-col-2">
             <h1 className="sub-title">What We Do</h1>
             <p align="left" className="about-me-text">
-              ChatChief predicts who your group leader (the person in your group with the most influence) is using an algorithm based on who gets the most replies to their message within the shortest amount of time.
+              ChatChief predicts who the person in your group with the most influence (your ChatChief) is using an algorithm based on who gets the most replies to their message within the shortest amount of time.
             </p>
           </div>
         </div>
