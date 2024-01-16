@@ -180,10 +180,13 @@ def analyze_chat(desiredChatName):
     finally:
         # Remove the chat.db file after processing
         os.remove('assets/chat.db')
-
+        print("Something went wrong. Please refresh the page and try again")
         # Close the cursor and connection
-        cursor.close()
-        connection.close()
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+        return
 
 
 if __name__ == "__main__":
