@@ -5,7 +5,7 @@ import PhoneImage from "./assets/phone-image.png"
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Route, Routes }from "react-router-dom";
 
-const backend = "http://localhost:8000"
+const backend = "https://chatchief.onrender.com/"
 
 function App() {
   const fileInput = useRef(null);
