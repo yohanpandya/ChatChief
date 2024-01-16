@@ -1,14 +1,17 @@
 import sqlite3
 import random
 import sys
-
+import os
 
 
 def analyze_chat(desiredChatName):
+    # Check if chat.db file exists
+    if not os.path.exists('assets/chat.db'):
+        print("Error: Please upload the chat.db file.")
+        return
     if desiredChatName == "":
         print("Error: Please enter a group chat name. Also, make sure your uploaded file is titled \"chat.db\"")
-        cursor.close()
-        connection.close()
+        
         return
     # Connect to the database
     connection = sqlite3.connect('assets/chat.db') 
@@ -172,6 +175,8 @@ def analyze_chat(desiredChatName):
         else:
             break
             #print("ALERT: side character", number, "is a side character, with a score of", score)
+    
+    os.remove('assets/chat.db')
 
     cursor.close()
     connection.close()
