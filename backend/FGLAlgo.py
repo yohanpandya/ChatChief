@@ -44,7 +44,13 @@ def analyze_chat(desiredChatName):
         """)
 
         test = cursor.fetchall()
-        user_num = test[0][0]
+        try:
+            user_num = test[0][0]
+        except:
+            print("Please check your groupchat name (most be exact)")
+            cursor.close()
+            connection.close()
+            return
 
         cursor.execute("INSERT OR REPLACE INTO handle (ROWID, id, service) VALUES (?, ?, ?)", (0, user_num, "iMessage"))
 
