@@ -72,16 +72,17 @@ function App() {
 
         <div className="row">
           <div className="Upload-col-1">
-            <h2 className="sub-title">Find chat.db</h2>
+            <h2 className="sub-title">How it Works</h2>
             <ol align="left" className="about-me-text">
-              <li>Open Finder</li>
-              <li>Click "Go" from the toolbar at the top left.</li>
-              <li>Click "Go to Folder..." (the second to last option)</li>
-              <li>Copy and paste this in "~/Library/Messages"</li>
-              <li>Copy your chat.db file and paste it to your desktop.</li>
-              <li>Click "Choose File" on the right and upload your chat.db file</li>
-              <li>Enter your Groupchat name (must be exact)</li>
-              <li>Click submit and find out who your Groupchat Leader is!</li>
+            <li>Open Finder</li>
+          <li>Click "Go" from the toolbar at the top left.</li>
+          <li>Click "Go to Folder..." (the second-to-last option)</li>
+          <li>Copy and paste this: ~/Library/Messages</li>
+          <li>Copy your chat.db file and paste it somewhere accessible (like Desktop).</li>
+          <li>Click "Choose File" on the right and upload your chat.db file.</li>
+          <li>Enter your Groupchat name (must be exact).</li>
+          <li>Click submit and find out who your Groupchat Leader is!</li>
+
             </ol>
           </div>
 
@@ -101,7 +102,7 @@ function App() {
             </form>
 
             {/* Display loading message while loading */}
-            {loading && <p className="python-output">Loading...</p>}
+            {loading && <p className="python-output">Loading...<br />(this might take a while as chat.db is a large file)</p>}
             
             {/* Display Python script output */}
             {pythonOutput && (
