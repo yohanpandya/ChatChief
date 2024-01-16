@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.use(
     '/profile',
     createProxyMiddleware({
-      target: 'http://127.0.0.1:8000',
+      target: 'https://chatchief.onrender.com/' ,
       changeOrigin: true,
     })
   );
