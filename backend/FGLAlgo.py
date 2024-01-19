@@ -191,14 +191,9 @@ def analyze_chat(desiredChatName):
         # Remove the chat.db file after processing
         try:
             os.remove('assets/chat.db')
+            return
         except Exception as e:
             print(f"Error while removing the file: {e}")
-        finally:
-    # Close the cursor and connection
-            if cursor:
-                cursor.close()
-            if connection:
-                connection.close()
             return
 
 
