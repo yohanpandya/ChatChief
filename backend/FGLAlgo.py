@@ -177,16 +177,7 @@ def analyze_chat(desiredChatName):
                 break
                 #print("ALERT: side character", number, "is a side character, with a score of", score)
     except:
-        try:
-            os.remove('assets/chat.db')
-        except:
-            print("")
-        # Close the cursor and connection
-        if cursor:
-            cursor.close()
-        if connection:
-            connection.close()
-        return
+        print(e)
     finally:
         # Remove the chat.db file after processing
         try:
