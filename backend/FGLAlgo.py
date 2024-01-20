@@ -21,8 +21,11 @@ def analyze_chat(desiredChatName):
 
     
     # Execute SQL queries
-    cursor.execute("SELECT display_name FROM chat WHERE display_name != '';")
-
+    try:
+        cursor.execute("SELECT display_name FROM chat WHERE display_name != '';")
+    except:
+        print("something went wrong. Please reload the page and try again")
+        return
     groupchats = cursor.fetchall()
 
     cursor.execute("DROP TABLE IF EXISTS GroupMsgs")
