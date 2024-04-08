@@ -23,8 +23,9 @@ def analyze_chat(desiredChatName):
     # Execute SQL queries
     try:
         cursor.execute("SELECT display_name FROM chat WHERE display_name != '';")
-    except:
-        print("something went wrong. Please reload the page and try again")
+    except Exception as e:
+        print("An error occurred:", e)
+        print("Please reload the page and try again.")
         return
     groupchats = cursor.fetchall()
 
