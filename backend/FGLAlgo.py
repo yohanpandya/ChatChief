@@ -176,7 +176,7 @@ def analyze_chat(desiredChatName):
             continue
         mainThreshold = 1 + int(float(len(sorted_result)) * float(0.2))
         if i < mainThreshold:
-            print(str(number) + " is a main character, with a score of " + str(score) + "%")
+            print(str(number) + " is Turkish Quandale Dingle, with a score of " + str(score) + "%")
         else:
             break
             #print("ALERT: side character", number, "is a side character, with a score of", score)
